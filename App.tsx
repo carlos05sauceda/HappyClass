@@ -4,7 +4,7 @@ import PantallaInicioSesion, {
   RespuestaInicioSesion,
   Usuario,
 } from './components/Login';
-import PantallaCrearUsuario from './components/CrearUsuario'; // Ajusta la carpeta si está en otra ruta
+import PantallaCrearUsuario from './components/CrearUsuario'; 
 
 export default function App() {
   const [token, setToken] = useState<string | null>(null);

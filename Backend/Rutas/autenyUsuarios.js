@@ -1,4 +1,4 @@
-// routes/autenticacionYUsuarios.js
+
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -38,7 +38,7 @@ router.post('/autenticacion/iniciar-sesion', async (req, res) => {
   return res.json({ token, usuario: perfil });
 });
 
-// Solo el admin puede crear nuevos usuarios
+
 router.post('/usuarios', verificarToken, exigirRol('admin'), async (req, res) => {
   const { correo, contrasena, rol, nombre_completo, codigo_identificacion, departamento } = req.body;
 
